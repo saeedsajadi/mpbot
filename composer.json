@@ -1,0 +1,15 @@
+{
+  "require": {
+    "illuminate/database": "^5.5",
+    "irazasyed/telegram-bot-sdk": "3.0.x-dev",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Classes\\": "classes/"
+    },
+    "classmap": [
+      "models"
+    ]
+  }
+}
