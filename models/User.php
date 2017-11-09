@@ -11,7 +11,6 @@ class User extends Eloquent
         "first_name",
         "last_name",
         "username",
-        "caller",
         "step",
     ];
 
