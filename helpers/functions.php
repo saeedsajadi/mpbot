@@ -64,3 +64,23 @@ function answerNotification($telegram, $callback_id)
         'text'              => 'پاسخ شما ثبت شد.',
     ]);
 }
+
+
+/**
+ * convert persian and arabic numbers to english number
+ *
+ * @param $number
+ * @return int
+ */
+function numberToEnglish($number)
+{
+    $english = array(0,1,2,3,4,5,6,7,8,9);
+    $persian = array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹');
+    $arabic = array('٠','١','٢','٣','٤','٥','٦','٧','٨','٩');
+    $unicode_numbers = array('u06f0', 'u06f1', 'u06f2', 'u06f3', 'u06f4', 'u06f5', 'u06f6', 'u06f7', 'u06f8', 'u06f9');
+    $english_number =  str_replace($persian, $english, $number);
+    $english_number =  str_replace($arabic, $english, $english_number);
+    $english_number =  str_replace($unicode_numbers, $english, $english_number);
+
+    return intval($english_number);
+}
