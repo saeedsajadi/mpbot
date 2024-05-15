@@ -1,6 +1,6 @@
 {
   "require": {
-    "illuminate/database": "^8.0",
+    "illuminate/database": "^5.8",
     "irazasyed/telegram-bot-sdk": "3.0.x-dev",
     "vlucas/phpdotenv": "^2.4"
   },
